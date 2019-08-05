@@ -12,7 +12,7 @@ namespace Microsoft.BotBuilderSamples
         public AdapterWithErrorHandler(IConfiguration configuration, ILogger<BotFrameworkHttpAdapter> logger)
             : base(configuration, logger)
         {
-            // Enable logging at the adapter level using OnTurnError.
+            // Enable logging at the adapter level using OnTurnError. 
             OnTurnError = async (turnContext, exception) =>
             {
                 logger.LogError($"Exception caught : {exception}");
